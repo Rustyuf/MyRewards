@@ -30,6 +30,10 @@ public class SubmitResult {
         }
     }
 
+  public String resultMsg(String code) {
+    return ("Code: " + code + " Points Earned: " + pointsEarned + "\n");
+  }
+
     @Override
     public String toString() {
         if (enterCodeResult) {

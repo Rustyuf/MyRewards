@@ -18,7 +18,7 @@ import java.util.Map;
  * @author Rusty
  */
 public class McrClient {
-  static String                  SERVER = "https://secure.mycokerewards.com/xmlrpc";
+  static String                  SERVER = "http://www.mycokerewards.com/xmlrpc";
   private XmlRpcClient           client;
   private XmlRpcClientConfigImpl pConfig;
 
