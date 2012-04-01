@@ -169,6 +169,11 @@ public class CokeRewards {
 		mntmImport.addActionListener(new MntmImportActionListener());
 		mnFile.add(mntmImport);
 
+    JMenuItem mntmReport = new JMenuItem("Report");
+    mntmReport.setToolTipText("Get a report on the codes database");
+    mntmReport.addActionListener(new MntmReportActionListener());
+    mnFile.add(mntmReport);
+
 		JMenu mnEdit = new JMenu("Edit");
 
 		menuBar.add(mnEdit);
@@ -366,6 +371,13 @@ public class CokeRewards {
       }
 
       textFieldCodes.setText("");
+    }
+  }
+
+  private class MntmReportActionListener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+      textAreaStatus.append("\n" + codes.makeReport());
     }
   }
 }

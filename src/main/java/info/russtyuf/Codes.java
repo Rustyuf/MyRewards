@@ -207,5 +207,19 @@ public class Codes implements Serializable {
     }
   }
 
+  public String makeReport() {
+    ArrayList<String> msg = new ArrayList<String>();
+    int total = 0;
+    for (int key : valueMap.keySet()) {
+      int size = valueMap.get(key).size();
+      if (size != 0) {
+        msg.add(size + "\t" + key + " Point codes");
+        total += key*size;
+      }
+    }
+    msg.add("Total of " + total + " Points. \n");
+
+    return Joiner.on("\n").join(msg);
+  }
 }
 
